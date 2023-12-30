@@ -31,14 +31,14 @@ export class MyService {
     };
   }
 
-  postUserCredentials_(email: string, password: string, jobNames: string): Observable<any> {
+  postUserCredentials_(email: string, password: string, jobNames: string, phoneNumber: string): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
     const url = `http://localhost:2000/userCredentials`;
-    const userCredentials = {userEmail: email, userPassword: password, jobNames: jobNames};
+    const userCredentials = {userEmail: email, userPassword: password, jobNames: jobNames, phoneNumber: phoneNumber};
     return this.httpClient.post(url, userCredentials, httpOptions).pipe(
       tap(() => console.log('User posted successfully')),
       catchError(this.handleError('postUserCredentials_'))

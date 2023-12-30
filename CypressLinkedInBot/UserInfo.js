@@ -1,10 +1,11 @@
 
 var UserInformation = {
     information: {
-        username: "hamim.alam.promo@gmail.com",
-        password: "topSecretPasswrod"
+        username: "",
+        password: "",
+        phoneNumber: "9152333212",
     },
-    jobNames: ""
+    jobNames: "Software engineer"
 };
 
 module.exports = UserInformation;

@@ -12,14 +12,18 @@ export class AppComponent {
   constructor(private service: MyService) {};
 
   okStatus: boolean = false;
+  didUserSayYes = false;
 
-  handleUserCredentials(email: string, password: string, jobNames: string) {
-    this.service.postUserCredentials_(email, password, jobNames)
+  handleUserCredentials(email: string, password: string, jobNames: string, phoneNumber: string) {
+    this.service.postUserCredentials_(email, password, jobNames, phoneNumber)
       .subscribe(res => {
+        setTimeout(() =>{
+          this.okStatus = false;
+        }, 5000)
         this.okStatus = true;
       });
   }
 
 
-  title = 'LinkedInBot-JobApply';
+
 }

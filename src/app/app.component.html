@@ -1,43 +1,68 @@
 <div class="container is-fluid mt-5">
   <div class="columns is-centered p-auto">
-    <div class="column is-three-quarters">
-      <div class="card">
-        <div *ngIf="okStatus">
-          <h3 class="has-text-primary">Wait For BOT to do the work!!! :)</h3>
-        </div>
-        <div class="card-content is-centered">
-          <div class="is-centered">
-            <h3 class="text-primary is-centered">
-              Information Needed from you......
-            </h3>
-          </div>
-          <div class="field">
-            <p class="control">
-              <input class="input" type="email" placeholder="LinkedIn User Email" #email>
-            </p>
-          </div>
-          <div class="field">
-            <p class="control">
-              <input class="input" type="password" placeholder="LinkedIn Password" #password>
-            </p>
-          </div>
-          <div class="mt-2">
-            <div class="field">
-              <div class="control">
-                <label for="jobNames">Job Name Must be Separated by ;</label>
-                <input class="input" #jobNames id="jobNames" type="text" placeholder="e.g. Software Engineer;Software Engineer II">
-              </div>
+
+
+    <div>
+      <div class="has-text-centered has-text-danger">
+        <label class="checkbox">
+          <input type="checkbox" [(ngModel)]="didUserSayYes">
+          I agree to the <a href="#">I UNDERSTAND THAT MY ACCOUNT (MU ACCOUNT) CAN BE PERMANENTLY DEACTIVATED OR DESABLED </a>
+        </label>
+      </div>
+      <div *ngIf="didUserSayYes">
+        <div class="column is-three-quarters">
+          <div class="card">
+            <div *ngIf="okStatus">
+              <h3 class="has-text-primary">Wait For BOT to do the work!!! :)</h3>
             </div>
-          </div>
-          <div class="mt-2">
-            <button class="button is-success" (click)="handleUserCredentials(email.value, password.value, jobNames.value)">
-              Start Applying
-            </button>
+            <div class="card-content is-centered">
+              <div class="is-centered">
+                <h3 class="is-centered text has-text-warning-dark">
+                  User Email and User Password is not needed if you have exported cookies.txt file
+                </h3>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="email" placeholder="LinkedIn User Email" #email>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="password" placeholder="LinkedIn Password" #password>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <label for="number">Phone Number* (is required!!)</label>
+                  <input class="input" #phoneNumber type="number" placeholder="Phone Number*" id="number">
+                </p>
+              </div>
+              <div class="mt-2">
+                <div class="field">
+                  <div class="control">
+                    <label for="jobNames">Job Name Must be Separated by ;</label>
+                    <input class="input" #jobNames id="jobNames" type="text"
+                           placeholder="e.g. Software Engineer;Software Engineer II">
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2">
+                <button class="button is-success"
+                        (click)="handleUserCredentials(email.value, password.value, jobNames.value, phoneNumber.value)">
+                  Start Applying
+                </button>
+              </div>
+
+            </div>
           </div>
 
         </div>
       </div>
-
     </div>
+
+
+
   </div>
+
+
 </div>

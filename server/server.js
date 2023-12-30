@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 app.post('/userCredentials', (req, res) => {
-  const {userEmail, userPassword, jobNames} = req.body;
+  const {userEmail, userPassword, jobNames, phoneNumber} = req.body;
   const workingDir = '../CypressLinkedInBot'
   const command = 'npm run testOnChrome'
   const options = {
@@ -24,7 +24,8 @@ app.post('/userCredentials', (req, res) => {
 var UserInformation = {
     information: {
         username: "${userEmail}",
-        password: "${userPassword}"
+        password: "${userPassword}",
+        phoneNumber: "${phoneNumber}",
     },
     jobNames: "${jobNames}"
 };
@@ -34,10 +35,10 @@ module.exports = UserInformation;
 
     fs.writeFileSync('../CypressLinkedInBot/UserInfo.js', information, 'utf-8');
     res.status(201).send('User credentials saved successfully');
-    exec(command, options, (error, stdout, stderr) =>{
+    exec(command, options, (error, stdout, stderr) => {
       if (error)
         return;
-      if(stderr)
+      if (stderr)
         return;
       console.log(stdout);
     })
