@@ -1,0 +1,18 @@
+{
+  "name": "cypresslinkedinbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testOnChrome": "npx cypress run --browser chrome --headed --spec 'cypress/e2e/Bot.cy.js'",
+    "start": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
