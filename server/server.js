@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 app.post('/userCredentials', (req, res) => {
   const {userEmail, userPassword, jobNames, phoneNumber} = req.body;
-  const workingDir = '../CypressLinkedInBot'
+  const workingDir = '../BOTEngine'
   const command = 'npm run testOnChrome'
   const options = {
     cwd: workingDir
@@ -33,7 +33,7 @@ var UserInformation = {
 module.exports = UserInformation;
     `;
 
-    fs.writeFileSync('../CypressLinkedInBot/UserInfo.js', information, 'utf-8');
+    fs.writeFileSync('../BOTEngine/UserInfo.js', information, 'utf-8');
     res.status(201).send('User credentials saved successfully');
     exec(command, options, (error, stdout, stderr) => {
       if (error)

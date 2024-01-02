@@ -1,27 +1,84 @@
-# LinkedInBotJobApply
+# LinkedInBot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+LinkedInBot is an application designed to automate the 'Easy Apply' feature on LinkedIn, streamlining the job application process.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Before you begin, ensure you have the following installed:
+- Node.js and npm (Node Package Manager)
 
-## Build
+### Installing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Follow these steps to get your development environment running:
 
-## Running unit tests
+1. **Clone the repository**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   git clone [URL_of_the_GitHub_repository]
+   ```
 
-## Running end-to-end tests
+2. **Install dependencies for the main project**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   Navigate to the project directory and run:
 
-## Further help
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. **Install dependencies for the server**
+
+   Change directory to the server folder and install the necessary packages:
+
+   ```bash
+   cd server
+   npm install
+   ```
+
+4. **Install dependencies for the BOTEngine**
+
+   Navigate to the BOTEngine directory and install its dependencies:
+
+   ```bash
+   cd ../BOTEngine
+   npm install
+   ```
+
+### Running the application
+
+To start the application, you need to run the server and the client separately.
+
+1. **Start the server**
+
+   Navigate back to the server directory and start it:
+
+   ```bash
+   cd ../server
+   npm start
+   ```
+
+2. **Start the client**
+
+   Open a new terminal, navigate to the root directory of the project, and start the client:
+
+   ```bash
+   cd ..
+   npm start
+   ```
+
+The application should now be running and accessible at `localhost:4200`.
+
+## Usage
+
+[Provide instructions on how to use the application]
+
+## Contributing
+
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+## License
+
+[Specify the license under which the project is released]

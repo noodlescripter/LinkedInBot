@@ -1,12 +1,12 @@
+<app-guides></app-guides>
 <div class="container is-fluid mt-5">
   <div class="columns is-centered p-auto">
-
-
     <div>
       <div class="has-text-centered has-text-danger">
+
         <label class="checkbox">
           <input type="checkbox" [(ngModel)]="didUserSayYes">
-          I agree to the <a href="#">I UNDERSTAND THAT MY ACCOUNT (MU ACCOUNT) CAN BE PERMANENTLY DEACTIVATED OR DESABLED </a>
+          {{ aknowlegdement }}
         </label>
       </div>
       <div *ngIf="didUserSayYes">
@@ -34,20 +34,20 @@
               <div class="field">
                 <p class="control">
                   <label for="number">Phone Number* (is required!!)</label>
-                  <input class="input" #phoneNumber type="number" placeholder="Phone Number*" id="number">
+                  <input class="input" #phoneNumber type="number" placeholder="Phone Number*" id="number" [(ngModel)]="phoneNumberRequired">
                 </p>
               </div>
               <div class="mt-2">
                 <div class="field">
                   <div class="control">
-                    <label for="jobNames">Job Name Must be Separated by ;</label>
+                    <label for="jobNames">Job Name Must be Separated by ; (is Required)</label>
                     <input class="input" #jobNames id="jobNames" type="text"
-                           placeholder="e.g. Software Engineer;Software Engineer II">
+                           placeholder="e.g. Software Engineer;Software Engineer II" [(ngModel)]="jobNameRequired">
                   </div>
                 </div>
               </div>
               <div class="mt-2">
-                <button class="button is-success"
+                <button class="button is-success" [disabled]="!phoneNumberRequired || !jobNameRequired"
                         (click)="handleUserCredentials(email.value, password.value, jobNames.value, phoneNumber.value)">
                   Start Applying
                 </button>
@@ -59,9 +59,6 @@
         </div>
       </div>
     </div>
-
-
-
   </div>
 
 
