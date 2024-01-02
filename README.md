@@ -74,6 +74,8 @@ The application should now be running and accessible at `localhost:4200`.
 ## Screenshot
 ![Screenshot of LinkedInBot](linkedinBot.png)
 
+## Video
+![GIF of LinkedInBot](linkedInBot.gif)
 
 ## Contributing
 
