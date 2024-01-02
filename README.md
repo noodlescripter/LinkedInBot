@@ -71,14 +71,11 @@ To start the application, you need to run the server and the client separately.
 
 The application should now be running and accessible at `localhost:4200`.
 
-## Usage
-
-[Provide instructions on how to use the application]
-
 ## Contributing
 
 If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
 
 ## License
 
-[Specify the license under which the project is released]
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
