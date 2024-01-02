@@ -71,6 +71,10 @@ To start the application, you need to run the server and the client separately.
 
 The application should now be running and accessible at `localhost:4200`.
 
+## Screenshot
+![Screenshot of LinkedInBot](linkedinBot.png)
+
+
 ## Contributing
 
 If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
